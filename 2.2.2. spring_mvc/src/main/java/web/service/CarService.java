@@ -15,6 +15,9 @@ public class CarService{
         carsList.add(new Car("Skoda", "1.4 turbo", "Rapid"));
         carsList.add(new Car("Tesla", "electricX", "Model-X"));
         carsList.add(new Car("Lexus", "3.5Hybrid", "IS"));
+        if (count > 5) {
+            count = 5;
+        }
         return carsList.subList(0, count);
     }
 }
