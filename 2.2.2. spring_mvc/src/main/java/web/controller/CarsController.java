@@ -10,9 +10,9 @@ import web.service.CarService;
 public class CarsController {
 
     @GetMapping(value = "/cars")
-    public String printCars(@RequestParam(value = "count", required = false) String string, ModelMap model) {
+    public String printCars(@RequestParam(value = "count", required = false) int count, ModelMap model) {
 
-        model.addAttribute("cars_list", CarService.getCarsFromList(Integer.parseInt(string)));
+        model.addAttribute("cars_list", CarService.getCarsFromList(count));
         return "cars";
     }
 }
